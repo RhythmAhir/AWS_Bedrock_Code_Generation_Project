@@ -43,7 +43,7 @@ Inside the Lambda function code, I integrated AWS Bedrock to use the **"Anthropi
 
 To store the generated code, I created an Amazon **S3 bucket** with a structured folder (e.g., `code-output`) to organize output files. The Lambda function automatically saves each code snippet in this bucket, using a timestamped filename for uniqueness.
 
-- **Screenshot of the Empty S3 bucket**:
+**Screenshot of the Empty S3 bucket**:
   
 ![Alt text](<https://github.com/RhythmAhir/AWS_Bedrock_Code_Generation_Project/blob/main/Screenshots/2.%20S3%20Bucket%20Created.png>)
 
@@ -59,7 +59,7 @@ I configured **API Gateway** to allow external access to the Lambda function, en
 2. **Defining Routes**:  
    I created a POST route (`/code-generation`) in API Gateway, with integration set to invoke the Lambda function.
 
-   **Screenshots of API Gateway integration and route configuration**:
+**Screenshots of API Gateway integration and route configuration**:
     
 ![Alt text](<https://github.com/RhythmAhir/AWS_Bedrock_Code_Generation_Project/blob/main/Screenshots/3.%20API%20Gateway%20Integration%20with%20Lambda%20Function.png>)
 ![Alt text](<https://github.com/RhythmAhir/AWS_Bedrock_Code_Generation_Project/blob/main/Screenshots/4.%20API%20Gateway%20POST%20Route.png>)
@@ -82,7 +82,7 @@ I tested the API by sending a POST request via **Postman** to verify its functio
 2. **API Response**:  
    The response confirmed successful execution, showing that the code generation and storage processes worked as expected.
 
-   **Screenshot of the Postman request and response confirming successful execution**:
+**Screenshot of the Postman request and response confirming successful execution**:
    
 ![Alt text](<https://github.com/RhythmAhir/AWS_Bedrock_Code_Generation_Project/blob/main/Screenshots/5.%20API%20Calling%20Using%20POSTMAN.png>)
 
